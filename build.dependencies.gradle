@@ -1,6 +1,12 @@
 repositories {
     mavenCentral()
     google() // Needed for androidx
+
+    maven { url = "https://maven.rowanmcalpin.com/" }
+    maven { url = "https://maven.brott.dev/" } // Remove if you don't intend to use the FTC Dashboard (required if using PedroPathing)
+    maven { url = "https://mymaven.bylazar.com/releases" }// Put back when tuning
+    maven { url = "https://repo.dairy.foundation/releases"}
+
 }
 
 dependencies {
@@ -13,5 +19,19 @@ dependencies {
     implementation 'org.firstinspires.ftc:FtcCommon:11.0.0'
     implementation 'org.firstinspires.ftc:Vision:11.0.0'
     implementation 'androidx.appcompat:appcompat:1.2.0'
+
+    //Next FTC Gradle
+    implementation 'dev.nextftc:ftc:1.0.1'
+    implementation 'dev.nextftc:hardware:1.0.1' // If you would like to use the hardware module
+    implementation 'dev.nextftc:control:1.0.0'
+    implementation 'dev.nextftc:bindings:1.0.1'
+    implementation 'dev.nextftc.extensions:pedro:1.0.0'
+
+    //Pedro Gradle
+    implementation 'com.pedropathing:ftc:2.0.4'
+    implementation 'com.pedropathing:telemetry:1.0.0'
+
+    implementation 'com.bylazar:fullpanels:1.0.8' //Put back when tuning
+
 }
 
