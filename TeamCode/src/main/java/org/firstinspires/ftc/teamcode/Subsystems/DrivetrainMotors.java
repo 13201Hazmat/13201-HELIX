@@ -6,10 +6,10 @@ import dev.nextftc.hardware.impl.MotorEx;
 public class DrivetrainMotors implements Subsystem {
 
 
-    public static MotorEx frontLeftMotor = new MotorEx("front_left").reversed();
-    public static MotorEx frontRightMotor = new MotorEx("front_right");
-    public static MotorEx backLeftMotor = new MotorEx("back_left").reversed();
-    public static MotorEx backRightMotor = new MotorEx("back_right");
+    public static MotorEx frontLeftMotor = new MotorEx("frontLeft").reversed();
+    public static MotorEx frontRightMotor = new MotorEx("frontRight");
+    public static MotorEx backLeftMotor = new MotorEx("backLeft").reversed();
+    public static MotorEx backRightMotor = new MotorEx("backRight");
 
     @Override
     public void initialize(){

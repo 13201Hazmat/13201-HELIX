@@ -14,11 +14,11 @@ public class Launcher implements Subsystem, Component {
 
     public static final Launcher INSTANCE = new Launcher();
 
-    public static final String RIGHTLAUNCHERNAME = "rightLauncher";
-    public static final String LEFTLAUNCHERNAME = "leftLauncher";
+    public static final String RIGHT_LAUNCHER_NAME = "rightLauncher";
+    public static final String LEFT_LAUNCHER_NAME = "leftLauncher";
 
-    public MotorEx rightLauncherMotor = new MotorEx(RIGHTLAUNCHERNAME);
-    public MotorEx leftlauncherMotor = new MotorEx(LEFTLAUNCHERNAME);
+    public MotorEx rightLauncherMotor = new MotorEx(RIGHT_LAUNCHER_NAME);
+    public MotorEx leftlauncherMotor = new MotorEx(LEFT_LAUNCHER_NAME);
     public MotorGroup launcherMotor = new MotorGroup(rightLauncherMotor, leftlauncherMotor);
 
     public static boolean isLaunching = false;

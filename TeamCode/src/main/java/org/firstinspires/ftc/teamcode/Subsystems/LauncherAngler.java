@@ -1,5 +1,7 @@
 package org.firstinspires.ftc.teamcode.Subsystems;
 
+import java.util.Set;
+
 import dev.nextftc.core.commands.Command;
 import dev.nextftc.core.components.Component;
 import dev.nextftc.core.subsystems.Subsystem;
@@ -12,19 +14,24 @@ public class LauncherAngler implements Subsystem, Component {
 
     public static final LauncherAngler INSTANCE = new LauncherAngler();
 
-    public static final String LAUNCHERANGLERNAME = "launcherAngler";
+    public static final String LAUNCHERANGLERNAME = "launcherHoodServo";
 
     public ServoEx launcherAnglerServo = new ServoEx(LAUNCHERANGLERNAME);
 
+    public Command zeroServo = new SetPosition(launcherAnglerServo, 0).requires(this);
+
+    public Command shootAngle = new SetPosition(launcherAnglerServo, 0.05).requires(this);
+
+
     public Command goUp() {
         double before = launcherAnglerServo.getPosition();
-        double after = (before + 100);
+        double after = (before + 1);
         return new SetPosition(launcherAnglerServo, after).requires(this);
     }
 
     public Command goDown(){
         double before = launcherAnglerServo.getPosition();
-        double after = (before - 100);
+        double after = (before - 1);
         return new SetPosition(launcherAnglerServo, after).requires(this);
     }
 

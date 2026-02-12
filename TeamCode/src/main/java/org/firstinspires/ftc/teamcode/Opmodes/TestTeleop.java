@@ -59,6 +59,14 @@ public class TestTeleop extends NextFTCOpMode {
         );
         driverControlled.schedule();
 
+        //Use this for Pedropathing driving
+//        DriverControlledCommand driverControlled = new PedroDriverControlled(
+//                Gamepads.gamepad1().leftStickY(),
+//                Gamepads.gamepad1().leftStickX(),
+//                Gamepads.gamepad1().rightStickX()
+//        );
+//        driverControlled.schedule();
+
 
         //Intake controls
         Gamepads.gamepad1().leftBumper().toggleOnBecomesTrue()
@@ -77,12 +85,14 @@ public class TestTeleop extends NextFTCOpMode {
 
         //Launcher Angler controls
         Gamepads.gamepad1().dpadUp().toggleOnBecomesTrue()
-                .whenBecomesTrue(LauncherAngler.INSTANCE.goUp());
+                        .whenBecomesTrue(LauncherAngler.INSTANCE.goUp());
+
         Gamepads.gamepad1().dpadDown().toggleOnBecomesTrue()
                 .whenBecomesTrue(LauncherAngler.INSTANCE.goDown());
     }
     @Override
     public void onUpdate(){
+
     }
 
 }
